@@ -1,8 +1,10 @@
 import { UserReducer } from "../reducer/UserReducer";
 import React from "react";
-export const UserActions = () => {
-  const initalvalues = { user: [] };
-  const [state, dispatch] = React.useReducer(UserReducer, initalvalues);
+export function UserActions() {
+  const initalvar = {
+    user: [],
+  };
+  const [state, dispatch] = React.useReducer(UserReducer, initalvar);
   const addUser = (payload) => {
     dispatch({ type: "ADD_USER", payload });
   };
@@ -13,4 +15,4 @@ export const UserActions = () => {
   return {
     store,
   };
-};
+}
