@@ -3,8 +3,8 @@ export const UserReducer = (state, action) => {
     case "ADD_USER":
       return {
         ...state,
+        user: [...state.user, ...action.payload],
       };
-
     default:
       return {
         ...state,
